@@ -11,6 +11,9 @@ so nftContract here is a factory for instances of our GameItem contract.
   // here we deploy the contract
   const deployedNFTContract = await nftContract.deploy();
 
+  // wait for deployment to finish
+  await deployedNFTContract.deployed();
+
   // print the address of the deployed contract
   console.log("NFT Contract Address:", deployedNFTContract.address);
 }
